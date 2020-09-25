@@ -2,6 +2,7 @@ package com.profit.stockcalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -14,7 +15,7 @@ import com.jaredrummler.materialspinner.MaterialSpinner;
 
 public class MainActivity extends AppCompatActivity {
     String[] ITEMS = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"};
-    Button addition;
+    Button addition,cal;
     LinearLayout l1,l2,l3,l4,l5;
     int flag=1;
     @Override
@@ -22,12 +23,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         addition=findViewById(R.id.add);
+        cal=findViewById(R.id.calculate);
         l1=findViewById(R.id.lin1);
         l2=findViewById(R.id.lin2);
         l3=findViewById(R.id.lin3);
         l4=findViewById(R.id.lin4);
         l5=findViewById(R.id.lin5);
-
+cal.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent next = new Intent(MainActivity.this,SecondActivity.class);
+        startActivity(next);
+    }
+});
         addition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
