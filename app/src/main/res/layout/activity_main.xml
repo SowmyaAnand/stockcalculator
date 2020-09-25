@@ -41,6 +41,7 @@
     android:layout_marginTop="15dp"
     android:orientation="horizontal">
     <EditText
+        android:id="@+id/target1"
     android:layout_width="match_parent"
     android:layout_height="50dp"
         android:layout_margin="5dp"
@@ -48,6 +49,7 @@
     android:background="@color/colorwhite"
     android:layout_weight="5"/>
     <EditText
+        android:id="@+id/target2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="5dp"
@@ -55,6 +57,7 @@
         android:background="@color/colorwhite"
         android:layout_weight="5"/>
     <EditText
+        android:id="@+id/target3"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="5dp"
@@ -101,7 +104,7 @@ android:layout_margin="12dp"
 
             android:gravity="center_horizontal">
             <EditText
-                android:id="@+id/edit_text_user114"
+                android:id="@+id/buy1"
                 android:textSize="14dp"
                 android:textAlignment="center"
                 android:background="@drawable/customized_edittext"
@@ -135,7 +138,7 @@ android:layout_margin="12dp"
             android:layout_margin="12dp"
             android:gravity="center_horizontal">
             <EditText
-                android:id="@+id/edit_text_user214"
+                android:id="@+id/qnty1"
                 android:textSize="14dp"
                 android:background="@drawable/customized_edittext"
                 android:layout_width="match_parent"
@@ -167,7 +170,7 @@ android:layout_margin="12dp"
            android:layout_margin="12dp"
            android:gravity="center_horizontal">
            <EditText
-               android:id="@+id/edit_text_user11"
+               android:id="@+id/total1"
                android:textSize="14dp"
                android:background="@drawable/customized_edittext"
                android:layout_width="match_parent"
@@ -213,7 +216,7 @@ android:layout_margin="12dp"
 
                 android:gravity="center_horizontal">
                 <EditText
-                    android:id="@+id/edit_text_user21"
+                    android:id="@+id/buy2"
                     android:textSize="14dp"
                     android:textAlignment="center"
                     android:background="@drawable/customized_edittext"
@@ -247,7 +250,7 @@ android:layout_margin="12dp"
                 android:layout_margin="12dp"
                 android:gravity="center_horizontal">
                 <EditText
-                    android:id="@+id/edit_text_user22"
+                    android:id="@+id/qnty2"
                     android:textSize="14dp"
                     android:background="@drawable/customized_edittext"
                     android:layout_width="match_parent"
@@ -279,7 +282,7 @@ android:layout_margin="12dp"
                 android:layout_margin="12dp"
                 android:gravity="center_horizontal">
                 <EditText
-                    android:id="@+id/edit_text_user223"
+                    android:id="@+id/total2"
                     android:textSize="14dp"
                     android:background="@drawable/customized_edittext"
                     android:layout_width="match_parent"
@@ -325,7 +328,7 @@ android:layout_margin="12dp"
 
                 android:gravity="center_horizontal">
                 <EditText
-                    android:id="@+id/edit_text_user111"
+                    android:id="@+id/buy3"
                     android:textSize="14dp"
                     android:textAlignment="center"
                     android:background="@drawable/customized_edittext"
@@ -359,7 +362,7 @@ android:layout_margin="12dp"
                 android:layout_margin="12dp"
                 android:gravity="center_horizontal">
                 <EditText
-                    android:id="@+id/edit_text_user24"
+                    android:id="@+id/qnty3"
                     android:textSize="14dp"
                     android:background="@drawable/customized_edittext"
                     android:layout_width="match_parent"
@@ -391,7 +394,7 @@ android:layout_margin="12dp"
                 android:layout_margin="12dp"
                 android:gravity="center_horizontal">
                 <EditText
-                    android:id="@+id/edit_text_user1241"
+                    android:id="@+id/total3"
                     android:textSize="14dp"
                     android:background="@drawable/customized_edittext"
                     android:layout_width="match_parent"
@@ -437,7 +440,7 @@ android:layout_margin="12dp"
 
                 android:gravity="center_horizontal">
                 <EditText
-                    android:id="@+id/edit_text_user41"
+                    android:id="@+id/buy4"
                     android:textSize="14dp"
                     android:textAlignment="center"
                     android:background="@drawable/customized_edittext"
@@ -471,7 +474,7 @@ android:layout_margin="12dp"
                 android:layout_margin="12dp"
                 android:gravity="center_horizontal">
                 <EditText
-                    android:id="@+id/edit_text_user25"
+                    android:id="@+id/qnty4"
                     android:textSize="14dp"
                     android:background="@drawable/customized_edittext"
                     android:layout_width="match_parent"
@@ -495,7 +498,7 @@ android:layout_margin="12dp"
                 android:fontFamily="@font/roboto_light"
                 android:gravity="center_horizontal" />
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_layout44"
+                android:id="@+id/total4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/head"
@@ -549,7 +552,7 @@ android:layout_margin="12dp"
 
                 android:gravity="center_horizontal">
                 <EditText
-                    android:id="@+id/edit_text_user1"
+                    android:id="@+id/buy5"
                     android:textSize="14dp"
                     android:textAlignment="center"
                     android:background="@drawable/customized_edittext"
@@ -583,7 +586,7 @@ android:layout_margin="12dp"
                 android:layout_margin="12dp"
                 android:gravity="center_horizontal">
                 <EditText
-                    android:id="@+id/edit_text_user244"
+                    android:id="@+id/qnty5"
                     android:textSize="14dp"
                     android:background="@drawable/customized_edittext"
                     android:layout_width="match_parent"
@@ -615,7 +618,7 @@ android:layout_margin="12dp"
                 android:layout_margin="12dp"
                 android:gravity="center_horizontal">
                 <EditText
-                    android:id="@+id/edit_text_user"
+                    android:id="@+id/total5"
                     android:textSize="14dp"
                     android:background="@drawable/customized_edittext"
                     android:layout_width="match_parent"
