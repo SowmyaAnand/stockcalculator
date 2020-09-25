@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/stock_bg"
+    tools:context=".MainActivity">
+
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="40dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/colorBlack"
+        android:gravity="center_horizontal" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="ENTER ESTIMATED SELLING TARGET"
+        android:textColor="@color/colorwhite"
+        android:fontFamily="@font/roboto_light"
+    android:layout_marginTop="40dp"
+        android:gravity="center_horizontal" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:weightSum="15"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="15dp"
+    android:orientation="horizontal">
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+        android:layout_margin="5dp"
+    android:background="@color/colorwhite"
+    android:layout_weight="5"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@color/colorwhite"
+        android:layout_weight="5"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@color/colorwhite"
+        android:layout_weight="5"/>
+</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="ENTER INVESTMENT"
+        android:textColor="@color/colorwhite"
+        android:fontFamily="@font/roboto_light"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal" />
+<LinearLayout
+    android:id="@+id/lin1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="15"
+    android:layout_marginTop="15dp"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="BUY PRICE"
+            android:textColor="@color/colorwhite"
+            android:fontFamily="@font/roboto_light"
+            android:gravity="center_horizontal" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout114"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/head"
+            android:textAlignment="center"
+android:layout_margin="12dp"
+
+            android:gravity="center_horizontal">
+            <EditText
+                android:id="@+id/edit_text_user114"
+                android:textSize="14dp"
+                android:textAlignment="center"
+                android:background="@drawable/customized_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:textColorHighlight="@color/colorwhite"
+                android:inputType="text"
+                android:gravity="center_horizontal" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="QUANTITY"
+            android:textColor="@color/colorwhite"
+            android:fontFamily="@font/roboto_light"
+            android:gravity="center_horizontal" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout214"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/head"
+            android:textAlignment="center"
+            android:layout_margin="12dp"
+            android:gravity="center_horizontal">
+            <EditText
+                android:id="@+id/edit_text_user214"
+                android:textSize="14dp"
+                android:background="@drawable/customized_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:textColorHighlight="@color/colorwhite"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_weight="5"
+       android:orientation="vertical">
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textAlignment="center"
+           android:text="TOTAL"
+           android:textColor="@color/colorwhite"
+           android:fontFamily="@font/roboto_light"
+           android:gravity="center_horizontal" />
+       <com.google.android.material.textfield.TextInputLayout
+           android:id="@+id/text_input_layout11"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/head"
+           android:textAlignment="center"
+           android:layout_margin="12dp"
+           android:gravity="center_horizontal">
+           <EditText
+               android:id="@+id/edit_text_user11"
+               android:textSize="14dp"
+               android:background="@drawable/customized_edittext"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textColor="@color/colorwhite"
+               android:textAlignment="center"
+               android:textColorHighlight="@color/colorwhite"
+               android:inputType="text"
+               android:gravity="center_horizontal" />
+       </com.google.android.material.textfield.TextInputLayout>
+   </LinearLayout>
+
+
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/lin2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="15"
+        android:visibility="gone"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical">
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textAlignment="center"-->
+<!--                android:text="BUY PRICE"-->
+<!--                android:textColor="@color/colorwhite"-->
+<!--                android:fontFamily="@font/roboto_light"-->
+<!--                android:gravity="center_horizontal" />-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/head"
+                android:textAlignment="center"
+                android:layout_margin="12dp"
+
+                android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/edit_text_user21"
+                    android:textSize="14dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/customized_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorwhite"
+                    android:textColorHighlight="@color/colorwhite"
+                    android:inputType="text"
+                    android:gravity="center_horizontal" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical">
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textAlignment="center"-->
+<!--                android:text="QUANTITY"-->
+<!--                android:textColor="@color/colorwhite"-->
+<!--                android:fontFamily="@font/roboto_light"-->
+<!--                android:gravity="center_horizontal" />-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/head"
+                android:textAlignment="center"
+                android:layout_margin="12dp"
+                android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/edit_text_user22"
+                    android:textSize="14dp"
+                    android:background="@drawable/customized_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorwhite"
+                    android:textColorHighlight="@color/colorwhite"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical">
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textAlignment="center"-->
+<!--                android:text="TOTAL"-->
+<!--                android:textColor="@color/colorwhite"-->
+<!--                android:fontFamily="@font/roboto_light"-->
+<!--                android:gravity="center_horizontal" />-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout223"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/head"
+                android:textAlignment="center"
+                android:layout_margin="12dp"
+                android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/edit_text_user223"
+                    android:textSize="14dp"
+                    android:background="@drawable/customized_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorwhite"
+                    android:textAlignment="center"
+                    android:textColorHighlight="@color/colorwhite"
+                    android:inputType="text"
+                    android:gravity="center_horizontal" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lin3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="15"
+        android:visibility="gone"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+
+                android:textColor="@color/colorwhite"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_horizontal" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout111"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/head"
+                android:textAlignment="center"
+                android:layout_margin="12dp"
+
+                android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/edit_text_user111"
+                    android:textSize="14dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/customized_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorwhite"
+                    android:textColorHighlight="@color/colorwhite"
+                    android:inputType="text"
+                    android:gravity="center_horizontal" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+
+                android:textColor="@color/colorwhite"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_horizontal" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout112"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/head"
+                android:textAlignment="center"
+                android:layout_margin="12dp"
+                android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/edit_text_user24"
+                    android:textSize="14dp"
+                    android:background="@drawable/customized_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorwhite"
+                    android:textColorHighlight="@color/colorwhite"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+
+                android:textColor="@color/colorwhite"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_horizontal" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout122"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/head"
+                android:textAlignment="center"
+                android:layout_margin="12dp"
+                android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/edit_text_user1241"
+                    android:textSize="14dp"
+                    android:background="@drawable/customized_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorwhite"
+                    android:textAlignment="center"
+                    android:textColorHighlight="@color/colorwhite"
+                    android:inputType="text"
+                    android:gravity="center_horizontal" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lin4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="15"
+        android:visibility="gone"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+
+                android:textColor="@color/colorwhite"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_horizontal" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/head"
+                android:textAlignment="center"
+                android:layout_margin="12dp"
+
+                android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/edit_text_user41"
+                    android:textSize="14dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/customized_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorwhite"
+                    android:textColorHighlight="@color/colorwhite"
+                    android:inputType="text"
+                    android:gravity="center_horizontal" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+
+                android:textColor="@color/colorwhite"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_horizontal" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout42"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/head"
+                android:textAlignment="center"
+                android:layout_margin="12dp"
+                android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/edit_text_user25"
+                    android:textSize="14dp"
+                    android:background="@drawable/customized_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorwhite"
+                    android:textColorHighlight="@color/colorwhite"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+
+                android:textColor="@color/colorwhite"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_horizontal" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/head"
+                android:textAlignment="center"
+                android:layout_margin="12dp"
+                android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/edit_text_user44"
+                    android:textSize="14dp"
+                    android:background="@drawable/customized_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorwhite"
+                    android:textAlignment="center"
+                    android:textColorHighlight="@color/colorwhite"
+                    android:inputType="text"
+                    android:gravity="center_horizontal" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lin5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="15"
+        android:visibility="gone"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+
+                android:textColor="@color/colorwhite"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_horizontal" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/head"
+                android:textAlignment="center"
+                android:layout_margin="12dp"
+
+                android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/edit_text_user1"
+                    android:textSize="14dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/customized_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorwhite"
+                    android:textColorHighlight="@color/colorwhite"
+                    android:inputType="text"
+                    android:gravity="center_horizontal" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+
+                android:textColor="@color/colorwhite"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_horizontal" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/head"
+                android:textAlignment="center"
+                android:layout_margin="12dp"
+                android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/edit_text_user244"
+                    android:textSize="14dp"
+                    android:background="@drawable/customized_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorwhite"
+                    android:textColorHighlight="@color/colorwhite"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+
+                android:textColor="@color/colorwhite"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center_horizontal" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/head"
+                android:textAlignment="center"
+                android:layout_margin="12dp"
+                android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/edit_text_user"
+                    android:textSize="14dp"
+                    android:background="@drawable/customized_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorwhite"
+                    android:textAlignment="center"
+                    android:textColorHighlight="@color/colorwhite"
+                    android:inputType="text"
+                    android:gravity="center_horizontal" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="10">
+        <Button
+            android:id="@+id/add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="ADD"
+            android:layout_margin="10dp"
+            android:textColor="@color/colorwhite"
+            android:background="@color/colorgray"/>
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="CAlCULATE"
+            android:layout_margin="10dp"
+            android:textColor="@color/colorwhite"
+            android:background="@color/colorgray"/>
+
+    </LinearLayout>
+</LinearLayout>
