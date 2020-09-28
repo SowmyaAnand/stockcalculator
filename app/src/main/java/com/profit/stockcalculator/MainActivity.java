@@ -73,4 +73,7 @@ cal.setOnClickListener(new View.OnClickListener() {
             }
         });
     }
+
+    public void reset(View view) {
+    }
 }

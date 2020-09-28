@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,13 +28,14 @@ import com.profit.stockcalculator.MainActivity;
 import com.profit.stockcalculator.R;
 import com.profit.stockcalculator.SecondActivity;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment  {
     String[] ITEMS = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"};
     Button addition,cal;
     LinearLayout l1,l2,l3,l4,l5;
     int flag=1;
     TextView total_tt;
     String security_name;
+    Button rst;
     EditText t1,t2,t3;
     EditText buy1,buy2,buy3,buy4,buy5;
     EditText qt1,qt2,qt3,qt4,qt5;
@@ -83,15 +85,19 @@ public class HomeFragment extends Fragment {
         qt3.addTextChangedListener(q3change);
         qt4.addTextChangedListener(q4change);
         qt5.addTextChangedListener(q5change);
+
         tt1.setText("0");
         tt2.setText("0");
         tt3.setText("0");
         tt4.setText("0");
         tt5.setText("0");
         total_tt.setText("0");
+
+
         cal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent next = new Intent(getContext(), SecondActivity.class);
                 startActivity(next);
             }
@@ -2085,6 +2091,7 @@ public class HomeFragment extends Fragment {
                 Snackbar.make(view, "YOU HAVE  " + item, Snackbar.LENGTH_LONG).show();
             }
         });
+
         return root;
     }
     private TextWatcher buy1change = new TextWatcher() {
@@ -2522,5 +2529,7 @@ public class HomeFragment extends Fragment {
 
         }
     };
+
+
 
 }
