@@ -29,6 +29,8 @@
                 android:fontFamily="@font/roboto_medium"
                 android:textColor="@color/colorBlack"
                 android:gravity="center_horizontal" />
+
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -49,7 +51,7 @@
                 android:layout_marginTop="30dp"
                 android:orientation="horizontal">
                 <EditText
-                    android:id="@+id/target1"
+                    android:id="@+id/inputtarget1"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:inputType="number"
@@ -64,7 +66,7 @@
                     android:gravity="center_vertical"
                     tools:ignore="RtlCompat" />
                 <EditText
-                    android:id="@+id/target2"
+                    android:id="@+id/inputtarget2"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginLeft="5dp"
@@ -81,7 +83,7 @@
                     android:gravity="center_vertical"
                     tools:ignore="RtlCompat" />
                 <EditText
-                    android:id="@+id/target3"
+                    android:id="@+id/inputtarget3"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:textSize="16sp"
@@ -208,7 +210,7 @@
 <!--                        android:gravity="center_horizontal">-->
                         <TextView
                             android:id="@+id/total1"
-                            android:textSize="14dp"
+                            android:textSize="14sp"
                             android:layout_marginTop="12dp"
                             android:layout_width="match_parent"
                             android:textAlignment="center"
@@ -255,7 +257,7 @@
                         android:gravity="center_horizontal">
                         <EditText
                             android:id="@+id/buy2"
-                            android:textSize="14dp"
+                            android:textSize="14sp"
                             android:textAlignment="center"
                             android:background="@drawable/customized_edittext"
                             android:layout_width="match_parent"
@@ -289,7 +291,7 @@
                         android:gravity="center_horizontal">
                         <EditText
                             android:id="@+id/qnty2"
-                            android:textSize="14dp"
+                            android:textSize="14sp"
                             android:textAlignment="center"
                             android:background="@drawable/customized_edittext"
                             android:layout_width="match_parent"
@@ -315,7 +317,7 @@
                     <!--                android:gravity="center_horizontal" />-->
                     <TextView
                         android:id="@+id/total2"
-                        android:textSize="14dp"
+                        android:textSize="14sp"
                         android:layout_marginTop="12dp"
                         android:layout_width="match_parent"
                         android:textAlignment="center"
@@ -361,7 +363,7 @@
                         android:gravity="center_horizontal">
                         <EditText
                             android:id="@+id/buy3"
-                            android:textSize="14dp"
+                            android:textSize="14sp"
                             android:textAlignment="center"
                             android:background="@drawable/customized_edittext"
                             android:layout_width="match_parent"
@@ -395,7 +397,7 @@
                         android:gravity="center_horizontal">
                         <EditText
                             android:id="@+id/qnty3"
-                            android:textSize="14dp"
+                            android:textSize="14sp"
                             android:textAlignment="center"
                             android:background="@drawable/customized_edittext"
                             android:layout_width="match_parent"
@@ -421,7 +423,7 @@
                         android:gravity="center_horizontal" />
                     <TextView
                         android:id="@+id/total3"
-                        android:textSize="14dp"
+                        android:textSize="14sp"
                         android:layout_marginTop="12dp"
                         android:layout_width="match_parent"
                         android:textAlignment="center"
@@ -467,7 +469,7 @@
                         android:gravity="center_horizontal">
                         <EditText
                             android:id="@+id/buy4"
-                            android:textSize="14dp"
+                            android:textSize="14sp"
                             android:textAlignment="center"
                             android:background="@drawable/customized_edittext"
                             android:layout_width="match_parent"
@@ -501,7 +503,7 @@
                         android:gravity="center_horizontal">
                         <EditText
                             android:id="@+id/qnty4"
-                            android:textSize="14dp"
+                            android:textSize="14sp"
                             android:textAlignment="center"
                             android:background="@drawable/customized_edittext"
                             android:layout_width="match_parent"
@@ -527,7 +529,7 @@
                         android:gravity="center_horizontal" />
                     <TextView
                         android:id="@+id/total4"
-                        android:textSize="14dp"
+                        android:textSize="14sp"
                         android:layout_marginTop="12dp"
                         android:layout_width="match_parent"
                         android:textAlignment="center"
@@ -573,7 +575,7 @@
                         android:gravity="center_horizontal">
                         <EditText
                             android:id="@+id/buy5"
-                            android:textSize="14dp"
+                            android:textSize="14sp"
                             android:textAlignment="center"
                             android:background="@drawable/customized_edittext"
                             android:layout_width="match_parent"
@@ -607,7 +609,7 @@
                         android:gravity="center_horizontal">
                         <EditText
                             android:id="@+id/qnty5"
-                            android:textSize="14dp"
+                            android:textSize="14sp"
                             android:textAlignment="center"
                             android:background="@drawable/customized_edittext"
                             android:layout_width="match_parent"
@@ -633,7 +635,7 @@
                         android:gravity="center_horizontal" />
                     <TextView
                         android:id="@+id/total5"
-                        android:textSize="14dp"
+                        android:textSize="14sp"
                         android:layout_marginTop="12dp"
                         android:layout_width="match_parent"
                         android:textAlignment="center"
@@ -646,6 +648,49 @@
                 </LinearLayout>
 
 
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="15"
+                >
+                <TextView
+                    android:id="@+id/total_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorwhite"
+                    android:text="TOTAL"
+                    android:visibility="invisible"
+                    android:layout_weight="5"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal" />
+                <TextView
+                    android:id="@+id/total_text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/lightblue"
+                    android:text="TOTAL"
+                    android:layout_weight="5"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal" />
+                <TextView
+                    android:id="@+id/total_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorRed"
+                    android:text="TOTAL"
+                    android:layout_weight="5"
+                    android:textSize="14sp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    tools:ignore="RtlCompat" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
