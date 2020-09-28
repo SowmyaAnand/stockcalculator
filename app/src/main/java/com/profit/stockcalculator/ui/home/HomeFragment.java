@@ -28,14 +28,18 @@ import com.profit.stockcalculator.MainActivity;
 import com.profit.stockcalculator.R;
 import com.profit.stockcalculator.SecondActivity;
 
+import java.util.ArrayList;
+
 public class HomeFragment extends Fragment  {
     String[] ITEMS = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"};
+
+
     Button addition,cal;
     LinearLayout l1,l2,l3,l4,l5;
     int flag=1;
     TextView total_tt;
-    String security_name;
-    Button rst;
+    String security_name="none";
+    TextView rst;
     EditText t1,t2,t3;
     EditText buy1,buy2,buy3,buy4,buy5;
     EditText qt1,qt2,qt3,qt4,qt5;
@@ -57,9 +61,9 @@ public class HomeFragment extends Fragment  {
         l3=root.findViewById(R.id.lin3);
         l4=root.findViewById(R.id.lin4);
         l5=root.findViewById(R.id.lin5);
-        t1=root.findViewById(R.id.target1);
-        t2=root.findViewById(R.id.target2);
-        t3=root.findViewById(R.id.target3);
+        t1=root.findViewById(R.id.inputtarget1);
+        t2=root.findViewById(R.id.inputtarget2);
+        t3=root.findViewById(R.id.inputtarget3);
         buy1=root.findViewById(R.id.buy1);
         buy2=root.findViewById(R.id.buy2);
         buy3=root.findViewById(R.id.buy3);
@@ -75,6 +79,7 @@ public class HomeFragment extends Fragment  {
         tt3 = root.findViewById(R.id.total3);
         tt4 = root.findViewById(R.id.total4);
         tt5 = root.findViewById(R.id.total5);
+        rst =root.findViewById(R.id.reset);
         buy1.addTextChangedListener(buy1change);
         buy2.addTextChangedListener(buy2change);
         buy3.addTextChangedListener(buy3change);
@@ -92,14 +97,87 @@ public class HomeFragment extends Fragment  {
         tt4.setText("0");
         tt5.setText("0");
         total_tt.setText("0");
-
+rst.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        t1.setText("");
+        t2.setText("");
+        t3.setText("");
+        l1.setVisibility(View.VISIBLE);
+        l2.setVisibility(View.GONE);
+        l3.setVisibility(View.GONE);
+        l4.setVisibility(View.GONE);
+        l5.setVisibility(View.GONE);
+        buy1.setText("");
+        qt1.setText("");
+        tt1.setText("0");
+        total_tt.setText("0");
+    }
+});
 
         cal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String text1 = t1.getText().toString();
+                String text2 = t2.getText().toString();
+                String text3 =t3.getText().toString();
+                String intent_buy1 = buy1.getText().toString();
+                String intent_buy2 = buy2.getText().toString();
+                String intent_buy3 = buy3.getText().toString();
+                String intent_buy4 = buy4.getText().toString();
+                String intent_buy5 = buy5.getText().toString();
+                String intent_qt1 = qt1.getText().toString();
+                String intent_qt2 = qt2.getText().toString();
+                String intent_qt3 = qt3.getText().toString();
+                String intent_qt4 = qt4.getText().toString();
+                String intent_qt5 = qt5.getText().toString();
+                String intent_total1 = tt1.getText().toString();
+                String intent_total2 = tt2.getText().toString();
+                String intent_total3 = tt3.getText().toString();
+                String intent_total4 = tt4.getText().toString();
+                String intent_total5 = tt5.getText().toString();
+                String intent_total_total_value = total_tt.getText().toString();
+                if(text1.matches("")&&text2.matches("")&&text3.matches(""))
+                {
+                    Toast.makeText(getContext(),"Enter Estimated  Target Values",Toast.LENGTH_LONG).show();
+                }
+               else if(security_name.equals("none"))
+                {
+                    Toast.makeText(getContext(),"Select Security Name",Toast.LENGTH_LONG).show();
+                }
 
-                Intent next = new Intent(getContext(), SecondActivity.class);
-                startActivity(next);
+                else if(intent_buy1.matches("")&&intent_buy2.matches("")&&intent_buy3.matches("")&&intent_buy4.matches("")&&intent_buy5.matches(""))
+                {
+                    Toast.makeText(getContext(),"Enter atleast one investment",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    Intent next = new Intent(getContext(), SecondActivity.class);
+                    Bundle bundle =new Bundle();
+                    bundle.putString("intent_buy1",intent_buy1);
+                    bundle.putString("intent_buy2",intent_buy2);
+                    bundle.putString("intent_buy3",intent_buy3);
+                    bundle.putString("intent_buy4",intent_buy4);
+                    bundle.putString("intent_buy5",intent_buy5);
+                    bundle.putString("intent_qt1",intent_qt1);
+                    bundle.putString("intent_qt2",intent_qt2);
+                    bundle.putString("intent_qt3",intent_qt3);
+                    bundle.putString("intent_qt4",intent_qt4);
+                    bundle.putString("intent_qt5",intent_qt5);
+                    bundle.putString("intent_tt1",intent_total1);
+                    bundle.putString("intent_tt2",intent_total2);
+                    bundle.putString("intent_tt3",intent_total3);
+                    bundle.putString("intent_tt4",intent_total4);
+                    bundle.putString("intent_tt5",intent_total5);
+                    bundle.putString("intent_total_total_value",intent_total_total_value);
+                    bundle.putString("security_name",security_name);
+                    bundle.putString("intent_t1",text1);
+                    bundle.putString("intent_t2",text2);
+                    bundle.putString("intent_t3",text3);
+                    next.putExtras(bundle);
+                    startActivity(next);
+                }
+
             }
         });
         addition.setOnClickListener(new View.OnClickListener() {
@@ -2088,7 +2166,7 @@ public class HomeFragment extends Fragment  {
 
             @Override public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
                 security_name = item;
-                Snackbar.make(view, "YOU HAVE  " + item, Snackbar.LENGTH_LONG).show();
+                Snackbar.make(view, "YOU HAVE SELECTED " + item, Snackbar.LENGTH_LONG).show();
             }
         });
 
@@ -2531,5 +2609,9 @@ public class HomeFragment extends Fragment  {
     };
 
 
+    @Override
+    public void onStart() {
+        super.onStart();
 
+    }
 }
