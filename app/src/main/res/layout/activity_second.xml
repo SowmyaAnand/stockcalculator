@@ -460,7 +460,7 @@ android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:weightSum="10"
-            android:background="@color/lightred"
+            android:background="@color/lightblue"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="match_parent"

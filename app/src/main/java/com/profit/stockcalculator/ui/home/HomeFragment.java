@@ -109,8 +109,20 @@ rst.setOnClickListener(new View.OnClickListener() {
         l4.setVisibility(View.GONE);
         l5.setVisibility(View.GONE);
         buy1.setText("");
+        buy2.setText("");
+        buy3.setText("");
+        buy4.setText("");
+        buy5.setText("");
         qt1.setText("");
+        qt2.setText("");
+        qt3.setText("");
+        qt4.setText("");
+        qt5.setText("");
         tt1.setText("0");
+        tt2.setText("0");
+        tt3.setText("0");
+        tt4.setText("0");
+        tt5.setText("0");
         total_tt.setText("0");
     }
 });
@@ -152,6 +164,7 @@ rst.setOnClickListener(new View.OnClickListener() {
                 }
                 else
                 {
+                    Log.e("hme","buy1"+intent_buy1+intent_buy2);
                     Intent next = new Intent(getContext(), SecondActivity.class);
                     Bundle bundle =new Bundle();
                     bundle.putString("intent_buy1",intent_buy1);
@@ -176,6 +189,7 @@ rst.setOnClickListener(new View.OnClickListener() {
                     bundle.putString("intent_t3",text3);
                     next.putExtras(bundle);
                     startActivity(next);
+
                 }
 
             }

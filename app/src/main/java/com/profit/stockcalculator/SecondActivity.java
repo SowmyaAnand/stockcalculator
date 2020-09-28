@@ -3,6 +3,7 @@ package com.profit.stockcalculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,6 +17,7 @@ Integer selling_price;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_second);
         trget1 = findViewById(R.id.target1);
         trget2 = findViewById(R.id.target2);
@@ -62,6 +64,7 @@ Integer selling_price;
         String t1 =bundle.getString("intent_t1");
         String t2 =bundle.getString("intent_t2");
         String t3 =bundle.getString("intent_t3");
+        Log.e("second","oncreate"+sec_buy1);
        security_nm.setText(sec_security_name);
        trget1.setText(t1);
        trget2.setText(t2);
@@ -222,4 +225,10 @@ trget3.setOnClickListener(new View.OnClickListener() {
 //        anim.start();
 //
 //    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.e("second","onstart");
+    }
 }
